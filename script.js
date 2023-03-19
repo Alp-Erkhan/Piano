@@ -11,3 +11,8 @@ pianoKeys.forEach(key => {
     key.addEventListener("click", () => playTune(key.dataset.key))
 })
 
+const pressedKey = (e) => {
+    playTune(e.key);
+}
+
+document.addEventListener("keydown", pressedKey);
